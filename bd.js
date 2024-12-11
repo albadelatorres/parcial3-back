@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 async function connectBD() {
-    const bdName = "parcial2";
+    const bdName = "parcial3";
 
     try {
         await mongoose.connect(`mongodb+srv://root:root@cluster0.jxb2l.mongodb.net/${bdName}`, {

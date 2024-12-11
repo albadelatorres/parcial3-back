@@ -15,7 +15,7 @@ app.use(cors());
 
 // Ruta básica para manejar GET /
 app.get('/', (req, res) => {
-    res.send("API del Parcial 2");
+    res.send("API del Parcial 3");
 });
 
 
@@ -28,5 +28,11 @@ const dosRouter = require("./Controller/dosRouter");
 app.use("/dos", dosRouter);
 */
 
+const logsRouter = require("./Controller/logsRouter");
+app.use("/logs", logsRouter);
+
+const imagenesRouter = require("./Controller/imagenesRouter");
+app.use("/imagenes", imagenesRouter);
+
 // Iniciar servidor
-app.listen(PORT, () => console.log(`Parcial 2 server ready on port: ${PORT}.`));
+app.listen(PORT, () => console.log(`Parcial 3 server ready on port: ${PORT}.`));
