@@ -69,20 +69,24 @@ unoRouter.delete("/:id", async (req, res) => {
 
 // Obtener todas las ubicaciones de un usuario por email
 unoRouter.get("/user-locations/:email", async (req, res) => {
-    const email = req.params.email; // Obtener email de los parámetros de la URL
+    const email = req.params.email;
   
     if (!email) {
       return res.status(400).json({ message: "El email es obligatorio" });
     }
   
     try {
-      const mapa = await Mapas.findOne({ user_email: email });
+      // Cambiar findOne por find para obtener todos los documentos que coincidan
+      const mapas = await Mapas.find({ user_email: email });
   
-      if (!mapa) {
+      if (mapas.length === 0) {
         return res.status(404).json({ message: "No se encontraron ubicaciones para este usuario" });
       }
   
-      res.json({ markers: mapa.markers });
+      // Combinar todos los marcadores de los documentos encontrados
+      const allMarkers = mapas.flatMap((mapa) => mapa.markers);
+  
+      res.json({ markers: allMarkers });
     } catch (error) {
       console.error("Error al obtener ubicaciones del usuario:", error);
       res.status(500).json({ message: "Error del servidor" });
