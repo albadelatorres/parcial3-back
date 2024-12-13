@@ -26,7 +26,7 @@ dosRouter.get("/:id", async (req, res) => {
 });
 
 // GET ALL BY EMAIL
-visitasRouter.get("/:email", async (req, res) => {
+dosRouter.get("/:email", async (req, res) => {
     const email = req.params.email;
   
     if (!email) {
