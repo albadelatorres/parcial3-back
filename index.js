@@ -22,10 +22,10 @@ app.get('/', (req, res) => {
 
 // Rutas
 const mapasRouter = require("./Controller/mapasRouter");
-app.use("/uno", mapasRouter);
+app.use("/mapas", mapasRouter);
 
 const visitasRouter = require("./Controller/visitasRouter");
-app.use("/dos", visitasRouter);
+app.use("/visitas", visitasRouter);
 
 
 const logsRouter = require("./Controller/logsRouter");
