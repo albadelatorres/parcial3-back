@@ -19,14 +19,14 @@ app.get('/', (req, res) => {
 });
 
 
-/*
-// Rutas
-const unoRouter = require("./Controller/unoRouter");
-app.use("/uno", unoRouter);
 
-const dosRouter = require("./Controller/dosRouter");
-app.use("/dos", dosRouter);
-*/
+// Rutas
+const mapasRouter = require("./Controller/mapasRouter");
+app.use("/uno", mapasRouter);
+
+const visitasRouter = require("./Controller/visitasRouter");
+app.use("/dos", visitasRouter);
+
 
 const logsRouter = require("./Controller/logsRouter");
 app.use("/logs", logsRouter);
