@@ -12,7 +12,7 @@ const VisitSchema = new mongoose.Schema(
       visited_email: { type: String, required: true }, // Email del usuario dueño del mapa
       visitor_email: { type: String, required: true }, // Email del usuario visitante
       visit_time: { type: Date, default: Date.now }, // Timestamp de la visita
-      auth_token: { type: String, required: true }, // Token de identificación OAuth del visitante
+      auth_token: { type: String }, // Token de identificación OAuth del visitante
     },
     { collection: "visitas" }
 );
