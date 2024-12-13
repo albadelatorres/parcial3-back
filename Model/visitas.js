@@ -17,4 +17,4 @@ const VisitSchema = new mongoose.Schema(
     { collection: "visitas" }
 );
 
-module.exports = mongoose.model('EntidaddosSchema', VisitSchema);
+module.exports = mongoose.model('Visitas', VisitSchema);

@@ -26,4 +26,4 @@ const MapSchema = new mongoose.Schema(
     { collection: "mapas" }
   );
 
-module.exports = mongoose.model('Entidaduno', MapSchema);
+module.exports = mongoose.model('Mapas', MapSchema);
