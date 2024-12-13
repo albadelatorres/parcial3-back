@@ -87,6 +87,6 @@ unoRouter.get("/user-locations/:email", async (req, res) => {
       console.error("Error al obtener ubicaciones del usuario:", error);
       res.status(500).json({ message: "Error del servidor" });
     }
-  });
+});
 
 module.exports = unoRouter;

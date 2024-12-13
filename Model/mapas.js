@@ -16,7 +16,7 @@ const MapSchema = new mongoose.Schema(
           country: { type: String, required: true }, // País
           coordinates: {
             lat: { type: Number, required: true }, // Latitud
-            lng: { type: Number, required: true }, // Longitud
+            lon: { type: Number, required: true }, // Longitud
           },
           image_uri: { type: String, required: false }, // URI de la imagen
           added_at: { type: Date, default: Date.now }, // Fecha de adición del marcador
